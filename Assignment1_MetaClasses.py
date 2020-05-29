@@ -161,6 +161,8 @@ class Truck(Car):
         self._price = self._price - milesxLoad
 
 
+#commented out main block so the professor can run their tests
+
 """if __name__ == '__main__':
 
     carSedan = Sedan("Toyota", "Sienna Le", 350000, 20000, 8)
