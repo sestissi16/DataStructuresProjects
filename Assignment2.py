@@ -1,10 +1,11 @@
 #Sari Stissi
 #Assignment 2
+
 #https://docs.python.org/3/library/functions.html ; used website to find ord()
 #https://www.tutorialspoint.com/python/string_upper.htm ; used to find .upper()
 #https://docs.python.org/3/library/sys.html ; used for maxsize
 
-
+#checks if strings are anagrams of each other
 def isAnagram(A, B):
     """
         Ord returns an integer representing the Unicode code point of that
@@ -18,20 +19,27 @@ def isAnagram(A, B):
         
         == returns true or false so I can use that to see if they're anagrams
     """
+    #exception handling
     if A or B == "":
         raise ValueError("Cannot pass an empty string")
     if A or B == None:
         raise ValueError("Cannot pass an empty string")
+
+    #variables to save the integers representing the Unicode code point of the characters
     numA = 0
     numB = 0
+
+    #for loop using ord() to get the integer representations
     for letter in A:
         numA += ord(letter.upper())
     for letter in B:
         numB += ord(letter.upper())
 
+    #checks if the sums are equal to each other 
+    #if they are equal than the strings are anagrams of each other
     return numA==numB
 
-
+#find the nearest element in the list
 def findNearest(A, key): 
     firstTime = True
     #keep track of the difference between key and element
@@ -81,6 +89,7 @@ def findNearest(A, key):
                 closestElm = element
     return closestElm
 
+#inserts an element into the list
 def insertElement(A, key):
     #Gives me range of indexes for while loop
     i = len(A) - 1
@@ -108,6 +117,7 @@ def insertElement(A, key):
     #return array
     return A
 
+#find the max sum sub array
 def maxSumSubArray(A):
     """Make maxOfSub super small so that things can be greater"""
     maxOfSub = -(2**32)
