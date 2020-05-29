@@ -1,7 +1,7 @@
 #Sari Stissi
 #Assignment 3
 
-from stackClassAssignment3Stissi import *
+from Assignment3_stackClass import *
 
 def isPair(character1, character2):
     if character1 == "(" and character2 == ")":
